@@ -2,5 +2,10 @@
   "homepage": {
     "title": "This is home page",
     "content": "This is page content"
+  },
+  "NavLinks": {
+    "home": "Home",
+    "trainer": "Trainer",
+    "contact": "Contact"
   }
 }
