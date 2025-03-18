@@ -1,7 +1,7 @@
 {
-  "homepage": {
-    "title": "This is home page",
-    "content": "This is page content"
+  "hero": {
+    "main-title": "THE #1 SKILL-BULDING SELF DEFENSE",
+    "sub-title": "SYSTEM ON THE PLANET."
   },
   "NavLinks": {
     "home": "Home",

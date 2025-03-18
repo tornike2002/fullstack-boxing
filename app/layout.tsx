@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   icons: [
     {
-      url: "/assets/logo.png",
-      href: "/assets/logo.png",
+      url: "/assets/JG-FREE.png",
+      href: "/assets/JG-FREE.png",
     },
   ],
 };
