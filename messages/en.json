@@ -4,8 +4,16 @@
     "sub-title": "SYSTEM ON THE PLANET."
   },
   "NavLinks": {
+    "logo-title": "JG BOXING",
     "home": "Home",
     "trainer": "Trainer",
     "contact": "Contact"
+  },
+  "footer": {
+    "boxing": "© 2025 JG Boxing",
+    "reserved": "All Rights Reserved",
+    "privacy": "Privacy Policy",
+    "blog": "Boxing Blog",
+    "core": "Core Values"
   }
 }

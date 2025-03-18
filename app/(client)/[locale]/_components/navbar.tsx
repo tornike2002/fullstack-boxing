@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { NavLinks } from "../../../../lib/links";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
-import MainContainer from "../../../../ui/MainContainer";
+import MainContainer from "./MainContainer";
 
 function Navbar() {
   const t = useTranslations("NavLinks");
@@ -15,7 +15,7 @@ function Navbar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsVisible(false); 
+        setIsVisible(false);
       } else {
         setIsVisible(true);
       }
@@ -47,9 +47,9 @@ function Navbar() {
                 priority
               />
             </Link>
-            <h2>JG BOXING</h2>
+            <h2 className="font-bold">{t("logo-title")}</h2>
           </div>
-          <div className="hidden items-center gap-4 pl-10 sm:flex">
+          <div className="hidden items-center gap-4 pl-10 sm:flex font-semibold">
             {NavLinks.map((link) => (
               <Link key={link.id} href={link.path}>
                 {t(link.name)}

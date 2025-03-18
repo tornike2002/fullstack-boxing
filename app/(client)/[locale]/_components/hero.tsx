@@ -1,4 +1,4 @@
-import MainContainer from "@/ui/MainContainer";
+import MainContainer from "@/app/(client)/[locale]/_components/MainContainer";
 import { useTranslations } from "next-intl";
 function HomeHero() {
   const t = useTranslations("hero");
