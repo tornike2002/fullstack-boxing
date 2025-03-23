@@ -1,5 +1,9 @@
-import Lottie from "lottie-react";
+"use client";
+
+import dynamic from "next/dynamic";
 import noDataAnimation from "@/public/animation/noDataAnimation.json";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 interface NoDataAnimationProps {
   height?: number;
