@@ -1,11 +1,11 @@
 "use client";
 import { useGetAnnouncement } from "@/hooks/useGetAnnouncement";
-import SmallerContainer from "./smallerContianer";
+import SmallerContainer from "../smallerContianer";
 import { AnnouncementTypes } from "@/types/announcementTypes";
 import AnnouncementContent from "./announcementContent";
-import ErrorDisplay from "./errorDisplay";
+import ErrorDisplay from "../errorDisplay";
 import AnnouncementSkeleton from "./announcementSkeleton";
-import NoDataAnimation from "./noDataAnimation";
+import NoDataAnimation from "../noDataAnimation";
 function Announcement() {
   const { data, isLoading, isError, error } = useGetAnnouncement();
 

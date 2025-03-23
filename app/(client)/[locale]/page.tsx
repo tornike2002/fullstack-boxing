@@ -1,4 +1,4 @@
-import Announcement from "./_components/announcement";
+import Announcement from "./_components/_announcement/announcement";
 import HomeHero from "./_components/hero";
 
 function HomePage() {
