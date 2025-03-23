@@ -1,12 +1,12 @@
-import MainContainer from "@/app/(client)/[locale]/_components/MainContainer";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { FaFacebookF, FaTiktok, FaYoutube } from "react-icons/fa";
+import SmallerContainer from "./smallerContianer";
 function Footer() {
   const t = useTranslations("footer");
   return (
     <footer className="bg-black pt-12 px-2">
-      <MainContainer>
+      <SmallerContainer>
         <div className="flex flex-col extraSm:flex-row items-start justify-between py-10 ">
           <div className="flex items-center gap-2 w-full">
             <Image
@@ -43,7 +43,7 @@ function Footer() {
             </div>
           </div>
         </div>
-      </MainContainer>
+      </SmallerContainer>
     </footer>
   );
 }

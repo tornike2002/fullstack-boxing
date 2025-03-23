@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import QueryProvider from "./queryProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,13 +37,15 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const messages = await getMessages();
+
   return (
     <NextIntlClientProvider messages={messages}>
       <html lang="en">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          {children}
+          <QueryProvider>{children}</QueryProvider>
+          
         </body>
       </html>
     </NextIntlClientProvider>
