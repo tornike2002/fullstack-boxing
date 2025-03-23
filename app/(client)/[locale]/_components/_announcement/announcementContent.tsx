@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@/navigation";
-import { AnnouncementTypes } from "@/types/announcementTypes";
+import { AnnouncementTypes } from "@/types/homeTypes";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useLocale } from "next-intl";

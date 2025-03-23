@@ -5,5 +5,13 @@ export async function getAnnouncements() {
   if (error) {
     throw new Error(error.message);
   }
-  return { data, error };
+  return data
+}
+
+export async function getHomeCards() {
+  const { data, error } = await supabase.from("home_cards").select("*");
+  if (error) {
+    throw new Error(error.message);
+  }
+  return data
 }

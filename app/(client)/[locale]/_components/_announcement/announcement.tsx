@@ -1,7 +1,7 @@
 "use client";
 import { useGetAnnouncement } from "@/hooks/useGetAnnouncement";
 import SmallerContainer from "../smallerContianer";
-import { AnnouncementTypes } from "@/types/announcementTypes";
+import { AnnouncementTypes } from "@/types/homeTypes";
 import AnnouncementContent from "./announcementContent";
 import ErrorDisplay from "../errorDisplay";
 import AnnouncementSkeleton from "./announcementSkeleton";
@@ -11,12 +11,12 @@ function Announcement() {
 
   if (isLoading) return <AnnouncementSkeleton />;
   if (isError) return <ErrorDisplay errorMsg={error.message} />;
-  if (!data || data.data.length === 0) return <NoDataAnimation />;
+  if (!data || data.length === 0) return <NoDataAnimation />;
 
   return (
     <section className="bg-black py-10">
       <SmallerContainer>
-        {data.data.map((announc: AnnouncementTypes) => (
+        {data.map((announc: AnnouncementTypes) => (
           <AnnouncementContent
             key={announc.id}
             title={announc.title}
