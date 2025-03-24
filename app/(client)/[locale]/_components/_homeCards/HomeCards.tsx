@@ -4,25 +4,37 @@ import ErrorDisplay from "../errorDisplay";
 import NoDataAnimation from "../noDataAnimation";
 import SmallerContainer from "../smallerContianer";
 import { useGetHomeCards } from "@/hooks/useGetHomeCards";
+
+import HomeCardsContent from "./HomeCardsContent";
+import { motion } from "framer-motion";
+import HomeCardsSkeleton from "./HomeCardsSkeleton";
+
 function HomeCards() {
   const { data, isLoading, isError, error } = useGetHomeCards();
-  if (isLoading) return <div>Loading...</div>;
+
+  if (isLoading) return <HomeCardsSkeleton />;
   if (isError) return <ErrorDisplay errorMsg={error.message} />;
   if (!data || data.length === 0) return <NoDataAnimation />;
+
   return (
-    <section>
+    <section className="bg-black">
       <SmallerContainer>
-        <div className="w-full grid grid-cols-3 gap-10">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 py-20">
           {data.map((card: HomeCardsTypes) => (
-            <div className="" key={card.id}>
-              <img
-                src={card.image}
-                alt={card.title.en}
-                className="w-full h-96 object-cover"
+            <motion.div
+              key={card.id}
+              className="relative group"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5 }}
+            >
+              <HomeCardsContent
+                title={card.title}
+                description={card.description}
+                image={card.image}
               />
-              <h2>{card.title.en}</h2>
-              <p>{card.description.en}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </SmallerContainer>
