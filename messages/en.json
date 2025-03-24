@@ -15,5 +15,10 @@
     "privacy": "Privacy Policy",
     "blog": "Boxing Blog",
     "core": "Core Values"
+  },
+  "contact": {
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address"
   }
 }
