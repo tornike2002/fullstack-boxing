@@ -23,26 +23,29 @@ export const InfiniteMovingCards = ({
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
 
-  useEffect(() => {
-    addAnimation();
-  }, []);
   const [start, setStart] = useState(false);
-  function addAnimation() {
-    if (containerRef.current && scrollerRef.current) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
 
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
-      });
+  useEffect(() => {
+    const addAnimation = () => {
+      if (containerRef.current && scrollerRef.current) {
+        const scrollerContent = Array.from(scrollerRef.current.children);
 
-      getDirection();
-      getSpeed();
-      setStart(true);
-    }
-  }
+        scrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);
+          if (scrollerRef.current) {
+            scrollerRef.current.appendChild(duplicatedItem);
+          }
+        });
+
+        getDirection();
+        getSpeed();
+        setStart(true);
+      }
+    };
+
+    addAnimation();
+  }, [direction]);
+
   const getDirection = () => {
     if (containerRef.current) {
       if (direction === "left") {
@@ -58,6 +61,7 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
@@ -69,10 +73,8 @@ export const InfiniteMovingCards = ({
       }
     }
   };
-  
-  // Add CSS animation keyframes to the document
+
   useEffect(() => {
-    // Check if the animation style already exists
     if (!document.querySelector('#infinite-moving-cards-keyframes')) {
       const styleSheet = document.createElement('style');
       styleSheet.id = 'infinite-moving-cards-keyframes';
@@ -92,7 +94,7 @@ export const InfiniteMovingCards = ({
       document.head.appendChild(styleSheet);
     }
   }, []);
-  
+
   return (
     <div
       ref={containerRef}

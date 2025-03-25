@@ -44,7 +44,6 @@ export default async function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <QueryProvider>{children}</QueryProvider>
-          
         </body>
       </html>
     </NextIntlClientProvider>
