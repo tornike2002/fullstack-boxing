@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { InstructorType } from "@/types/instructorTypes";
 import { useLocale } from "next-intl";
+import FlipTitle from "./flipTitle";
 function InstructorContent({ instructor }: { instructor: InstructorType }) {
   const locale = useLocale() as "en" | "ka" | "ru";
   return (
@@ -12,7 +13,8 @@ function InstructorContent({ instructor }: { instructor: InstructorType }) {
         transition={{ duration: 0.5 }}
         className=" w-full text-center text-3xl md:text-6xl font-bold py-4"
       >
-        {instructor.header[locale]}
+        <FlipTitle />
+
       </motion.h1>
 
       <div className="flex flex-col md:flex-row gap-8 justify-between items-stretch mb-16 w-full">
