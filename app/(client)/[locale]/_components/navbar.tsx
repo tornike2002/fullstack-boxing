@@ -5,6 +5,7 @@ import { NavLinks } from "../../../../lib/links";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import MainContainer from "./MainContainer";
+import LanguageSwitcher from "./_switcher/languageSwitcher";
 
 function Navbar() {
   const t = useTranslations("NavLinks");
@@ -55,6 +56,7 @@ function Navbar() {
                 {t(link.name)}
               </Link>
             ))}
+            <LanguageSwitcher />
           </div>
         </div>
       </MainContainer>

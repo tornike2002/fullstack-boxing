@@ -37,7 +37,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const messages = await getMessages();
-
   return (
     <NextIntlClientProvider messages={messages}>
       <html lang="en">
