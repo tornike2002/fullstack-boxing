@@ -5,7 +5,7 @@ import SmallerContainer from "./smallerContianer";
 function Footer() {
   const t = useTranslations("footer");
   return (
-    <footer className="bg-black pt-12 px-2">
+    <footer className="bg-black pt-12 px-2 border-t-2 border-white/40 shadow-[0_-2px_4px_rgba(255,255,255,0.3)]">
       <SmallerContainer>
         <div className="flex flex-col extraSm:flex-row items-start justify-between py-10 ">
           <div className="flex items-center gap-2 w-full">

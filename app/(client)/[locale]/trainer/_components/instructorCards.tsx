@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Carousel } from "./carousel";
 export function InstructorCards() {
   return (
-    <div className="relative overflow-hidden w-full bg-gradient-to-b from-black via-gray-700 to-[#4480d581]">
+  <div className="relative overflow-hidden w-full bg-gradient-to-b from-[#171B22] via-gray-800 to-black">
       <Carousel />
       <MacbookScroll
         title={

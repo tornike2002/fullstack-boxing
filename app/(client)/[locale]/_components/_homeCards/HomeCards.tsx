@@ -17,9 +17,9 @@ function HomeCards() {
   if (!data || data.length === 0) return <NoDataAnimation />;
 
   return (
-    <section className="bg-black">
+    <section className="bg-black px-6 md:px-0">
       <SmallerContainer>
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 py-20">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 py-10">
           {data.map((card: HomeCardsTypes) => (
             <motion.div
               key={card.id}

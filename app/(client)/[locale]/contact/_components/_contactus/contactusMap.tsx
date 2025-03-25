@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import SmallerContainer from "../../../_components/smallerContianer";
 
-// Fix default Leaflet icon issue
 if (typeof window !== "undefined") {
   L.Icon.Default.mergeOptions({
     iconRetinaUrl:
@@ -17,10 +17,10 @@ if (typeof window !== "undefined") {
 
 const mapStyle = {
   width: "100%",
-  height: "400px",
+  height: "700px",
 };
 
-const address = "Tashkent street, 1, Rustavi , Georgia";
+const address = "41.5630538, 44.9716338";
 
 const fetchGeocode = async (address: string) => {
   const response = await fetch(
@@ -46,7 +46,7 @@ const fetchGeocode = async (address: string) => {
 };
 
 export default function ContactUsMap() {
-  const [location, setLocation] = useState<[number, number] | null>(null); // Start with null
+  const [location, setLocation] = useState<[number, number] | null>(null);
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["geocode", address],
@@ -62,19 +62,21 @@ export default function ContactUsMap() {
   if (isLoading) return <div>Loading...</div>;
   if (error instanceof Error) return <div>Error: {error.message}</div>;
 
-  if (!location) return <div>No location data available</div>; // Prevent rendering the map until data is available
+  if (!location) return <div>No location data available</div>;
 
   return (
     <div style={mapStyle}>
-      <MapContainer center={location} zoom={13} style={mapStyle}>
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
-        <Marker position={location}>
-          <Popup>Your specific location</Popup>
-        </Marker>
-      </MapContainer>
+      <SmallerContainer>
+        <MapContainer center={location} zoom={13} style={mapStyle}>
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          />
+          <Marker position={location}>
+            <Popup>Your specific location</Popup>
+          </Marker>
+        </MapContainer>
+      </SmallerContainer>
     </div>
   );
 }

@@ -14,16 +14,20 @@ function Announcement() {
   if (!data || data.length === 0) return <NoDataAnimation />;
 
   return (
-    <section className="bg-black py-10">
+    <section className="bg-black px-6 md:px-0">
       <SmallerContainer>
-        {data.map((announc: AnnouncementTypes) => (
-          <AnnouncementContent
-            key={announc.id}
-            title={announc.title}
-            description={announc.description}
-            image={announc.image}
-          />
-        ))}
+        <div
+          className="bg-black py-10 border border-white rounded-md "
+        >
+          {data.map((announc: AnnouncementTypes) => (
+            <AnnouncementContent
+              key={announc.id}
+              title={announc.title}
+              description={announc.description}
+              image={announc.image}
+            />
+          ))}
+        </div>
       </SmallerContainer>
     </section>
   );
