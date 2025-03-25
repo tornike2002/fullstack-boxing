@@ -1,12 +1,15 @@
 import { HomeCardsTypes } from "@/types/homeTypes";
 import { useLocale } from "next-intl";
+import Image from "next/image";
 import { AiOutlineEye } from "react-icons/ai";
 
 function HomeCardsContent({ image, title, description }: HomeCardsTypes) {
   const locale = useLocale() as "en" | "ka" | "ru";
   return (
     <div className="relative w-full h-96 group overflow-hidden rounded-lg shadow-lg bg-white ring-1 ring-gray-200 transition-all duration-300 hover:ring-4 hover:ring-white hover:shadow-2xl">
-      <img
+      <Image
+      width={500}
+      height={500}
         src={image}
         alt={"image"}
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"

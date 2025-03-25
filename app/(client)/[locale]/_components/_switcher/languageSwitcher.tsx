@@ -39,7 +39,7 @@ function LanguageSwitcher() {
     if (currentLang !== selectedLanguage) {
       setSelectedLanguage(currentLang);
     }
-  }, [currentLang]);
+  }, [currentLang, selectedLanguage]);
 
   return (
     <Select value={selectedLanguage} onValueChange={handleChange}>

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { InstructorType } from "@/types/instructorTypes";
 import { useLocale } from "next-intl";
 import FlipTitle from "./flipTitle";
+import Image from "next/image";
 function InstructorContent({ instructor }: { instructor: InstructorType }) {
   const locale = useLocale() as "en" | "ka" | "ru";
   return (
@@ -36,9 +37,11 @@ function InstructorContent({ instructor }: { instructor: InstructorType }) {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <img
+            <Image
               src={instructor.image}
               alt="Instructor"
+              width={500}
+              height={600}
               className="w-full h-[500px] md:h-[600px] object-cover rounded-lg shadow-lg overflow-hidden opacity-75"
             />
           </motion.div>

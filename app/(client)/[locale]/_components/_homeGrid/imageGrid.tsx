@@ -1,5 +1,6 @@
 import { LayoutGrid } from "@/components/ui/layout-grid";
 import SmallerContainer from "../smallerContianer";
+
 export function ImageGrid() {
   return (
     <section className=" bg-black text-white">
@@ -37,7 +38,7 @@ const SkeletonTwo = () => {
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Step into the ring and rise above the competition. It's your time to shine and prove your worth.
+        Step into the ring and rise above the competition. It&apos;s your time to shine and prove your worth.
       </p>
     </div>
   );
@@ -51,7 +52,7 @@ const SkeletonThree = () => {
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Boxing is not just a sport, it's a lifestyle. Embrace the grind and let your hard work speak for itself.
+        Boxing is not just a sport, it&apos;s a lifestyle. Embrace the grind and let your hard work speak for itself.
       </p>
     </div>
   );
@@ -65,7 +66,7 @@ const SkeletonFour = () => {
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        In the ring, it's not just about skill, it's about heart. Fight with passion and determination to achieve victory.
+        In the ring, it&apos;s not just about skill, it&apos;s about heart. Fight with passion and determination to achieve victory.
       </p>
     </div>
   );
