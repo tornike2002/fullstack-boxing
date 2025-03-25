@@ -5,7 +5,7 @@ function TrainerPage() {
   return (
     <div className="min-h-screen bg-black">
       <InstructorDesc />
-      {/* <InstructorCards /> */}
+   
       <HeroScrollDemo />
     </div>
   );
