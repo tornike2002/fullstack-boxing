@@ -12,7 +12,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   try {
     const messages = (await import(`./messages/${locale}.json`)).default;
 
-    console.log("Loaded messages:", messages); 
+  
 
     return {
       locale,

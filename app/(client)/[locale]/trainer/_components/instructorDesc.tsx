@@ -13,7 +13,7 @@ function InstructorDesc() {
   if (error) return <ErrorDisplay errorMsg={error.message} />;
   if (!instructors || instructors.length === 0) return <NoDataAnimation />;
 
-  console.log(instructors);
+
   return (
     <SmallerContainer>
       <div className="pt-32 text-white flex justify-between w-full items-center">
