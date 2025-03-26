@@ -11,7 +11,7 @@ const ContactUsMap = dynamic(
 function Contact() {
   return (
     <div className="bg-black">
-      {/* <SparklesPreview /> */}
+  
       <Lamp />
       <MainContainer>
         <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center justify-items-center bg-black w-full">
