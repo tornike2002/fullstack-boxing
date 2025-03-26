@@ -6,6 +6,7 @@ import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import MainContainer from "./MainContainer";
 import LanguageSwitcher from "./_switcher/languageSwitcher";
+import BurgerMenu from "./_burgermenu/burgermenu";
 
 function Navbar() {
   const t = useTranslations("NavLinks");
@@ -57,6 +58,9 @@ function Navbar() {
               </Link>
             ))}
             <LanguageSwitcher />
+          </div>
+          <div className="sm:hidden block">
+            <BurgerMenu />
           </div>
         </div>
       </MainContainer>

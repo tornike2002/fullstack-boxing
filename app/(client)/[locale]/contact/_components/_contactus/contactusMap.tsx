@@ -5,6 +5,8 @@ import { useQuery } from "@tanstack/react-query";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import SmallerContainer from "../../../_components/smallerContianer";
+import ErrorDisplay from "../../../_components/errorDisplay";
+import MapSkeleton from "./mapskeleton";
 
 if (typeof window !== "undefined") {
   L.Icon.Default.mergeOptions({
@@ -59,8 +61,8 @@ export default function ContactUsMap() {
     }
   }, [data]);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error instanceof Error) return <div>Error: {error.message}</div>;
+  if (isLoading) return <MapSkeleton />;
+  if (error instanceof Error) return <ErrorDisplay errorMsg={error.message} />;
 
   if (!location) return <div>No location data available</div>;
 
