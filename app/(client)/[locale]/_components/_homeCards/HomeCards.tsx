@@ -23,7 +23,7 @@ function HomeCards() {
           {data.map((card: HomeCardsTypes) => (
             <motion.div
               key={card.id}
-              className="relative group"
+              className="relative group cursor-pointer"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
