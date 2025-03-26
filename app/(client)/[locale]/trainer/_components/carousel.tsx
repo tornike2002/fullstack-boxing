@@ -1,16 +1,11 @@
 "use client";
 
-
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 export function Carousel() {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-gradient-to-b from-black via-gray-800 to-[#1C2129] dark:bg-gradient-to-b dark:from-black dark:via-gray-800 dark:to-[#1C2129] items-center justify-center relative overflow-hidden border-b border-white">
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="left"
-        speed="slow"
-      />
+    <div className="h-[25rem] mt-20 rounded-md flex flex-col antialiased bg-gradient-to-b from-black via-gray-800 to-black dark:bg-gradient-to-b dark:from-black dark:via-black dark:to-black items-center justify-center relative overflow-hidden ">
+      <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
     </div>
   );
 }
@@ -44,5 +39,5 @@ const testimonials = [
       "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
     name: "vinme vinme",
     title: "Moby-Dick",
-  }
+  },
 ];

@@ -39,14 +39,30 @@ function ContactusContent({ title, email, phone, address }: ContactTypes) {
         </motion.h1>
 
         <motion.div variants={fadeInVariants} className="mt-4 space-y-3">
-          <p className="text-lg md:text-xl">
-            <strong className="text-gray-300">{t("email")}:</strong> {email}
-          </p>
-          <p className="text-lg md:text-xl">
-            <strong className="text-gray-300">{t("phone")}:</strong> {phone}
-          </p>
-          <p className="text-lg md:text-xl">
-            <strong className="text-gray-300">{t("address")}:</strong> {address[locale]}
+          <div className="text-lg md:text-xl flex items-center space-x-2">
+            <strong className="text-gray-200 font-sans">{t("email")}:</strong>
+            <span className="text-gray-400 font-bold text-xl">{email}</span>
+          </div>
+          <div className="text-lg md:text-xl flex items-center space-x-2">
+            <strong className="text-gray-200 font-sans">{t("phone")}:</strong>
+            <span className="text-gray-400 font-bold text-xl">{phone}</span>
+          </div>
+          <div className="text-lg md:text-xl flex items-center space-x-2">
+            <strong className="text-gray-200 font-sans">{t("address")}:</strong>
+            <span className="text-gray-400 font-bold text-xl">{address[locale]}</span>
+          </div>
+        </motion.div>
+
+        {/* About Section */}
+        <motion.div variants={fadeInVariants} className="mt-8">
+          <motion.h2 variants={fadeInVariants} className="text-[28px] md:text-[36px] font-bold">
+            About Club
+          </motion.h2>
+          <p className="mt-4 text-lg md:text-xl text-gray-400">
+            Welcome to our boxing club, a place where passion meets discipline. Our club is dedicated to
+            training individuals of all levels, from beginners to professionals. We focus on strength,
+            endurance, and technique, helping members build confidence and achieve their fitness goals.
+            Join us and experience the thrill of boxing in a supportive and motivating environment.
           </p>
         </motion.div>
       </motion.div>
