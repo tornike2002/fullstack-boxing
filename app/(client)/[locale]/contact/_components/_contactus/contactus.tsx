@@ -15,7 +15,7 @@ function ContactUs() {
   if (isError) return <div>{error.message}</div>;
 
   return (
-    <section className="p-4  z-50">
+    <section className="p-4 z-20">
       <SmallerContainer>
         <motion.div>
           {data.map((contact: ContactTypes) => (

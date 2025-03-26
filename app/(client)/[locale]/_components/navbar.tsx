@@ -59,7 +59,7 @@ function Navbar() {
             ))}
             <LanguageSwitcher />
           </div>
-          <div className="sm:hidden block">
+          <div className="sm:hidden flex z-[9999]">
             <BurgerMenu />
           </div>
         </div>

@@ -67,7 +67,7 @@ export default function ContactUsMap() {
   if (!location) return <div>No location data available</div>;
 
   return (
-    <div style={mapStyle}>
+    <div style={mapStyle} className="z-10">
       <SmallerContainer>
         <MapContainer center={location} zoom={13} style={mapStyle}>
           <TileLayer
