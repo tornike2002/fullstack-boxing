@@ -7,12 +7,12 @@ import ErrorDisplay from "../../_components/errorDisplay";
 import InstructorContent from "./instructorContent";
 import { InstructorType } from "@/types/instructorTypes";
 import SmallerContainer from "../../_components/smallerContianer";
+import InstructorSkeleton from "./instructorSkeleton";
 function InstructorDesc() {
   const { data: instructors, isLoading, error } = useGetInstructors();
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <InstructorSkeleton />;
   if (error) return <ErrorDisplay errorMsg={error.message} />;
   if (!instructors || instructors.length === 0) return <NoDataAnimation />;
-
 
   return (
     <SmallerContainer>
