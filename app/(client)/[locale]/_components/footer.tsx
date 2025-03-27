@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { FaFacebookF, FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaTiktok } from "react-icons/fa";
 import SmallerContainer from "./smallerContianer";
 function Footer() {
   const t = useTranslations("footer");
