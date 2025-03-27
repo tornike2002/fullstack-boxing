@@ -55,7 +55,7 @@ function HomeHero() {
                    border-white border hover:bg-white
                    hover:text-black transition-all duration-300 ease"
               >
-                LEARN MORE & ABOUT US
+                {t("btn")}
               </button>
             </Link>
           </motion.div>

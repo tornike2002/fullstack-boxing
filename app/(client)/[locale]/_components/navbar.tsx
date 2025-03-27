@@ -49,18 +49,20 @@ function Navbar() {
                 priority
               />
             </Link>
-            <h2 className="font-bold">{t("logo-title")}</h2>
+            <h2 className="font-bold hidden extraSm:block">LG BOXING</h2>
           </div>
-          <div className="hidden items-center gap-4 pl-10 sm:flex font-semibold">
-            {NavLinks.map((link) => (
-              <Link key={link.id} href={link.path}>
-                {t(link.name)}
-              </Link>
-            ))}
+          <div className="flex items-center gap-3">
+            <div className="hidden items-center gap-4 pl-10 sm:flex font-semibold">
+              {NavLinks.map((link) => (
+                <Link key={link.id} href={link.path}>
+                  {t(link.name)}
+                </Link>
+              ))}
+            </div>
             <LanguageSwitcher />
-          </div>
-          <div className="sm:hidden flex z-[9999]">
-            <BurgerMenu />
+            <div className="sm:hidden flex z-[9999]">
+              <BurgerMenu />
+            </div>
           </div>
         </div>
       </MainContainer>

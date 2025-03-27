@@ -2,13 +2,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { NavLinks } from "@/lib/links";
-import { Link } from "@/navigation"; 
+import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
 
 function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const t = useTranslations("NavLinks");
   const toggleMenu = () => setIsOpen(!isOpen);
-
 
   useEffect(() => {
     if (isOpen) {
@@ -18,14 +18,12 @@ function BurgerMenu() {
     }
   }, [isOpen]);
 
-  
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024 && isOpen) {
-        setIsOpen(false); 
+        setIsOpen(false);
       }
     };
-
 
     window.addEventListener("resize", handleResize);
 
@@ -33,7 +31,6 @@ function BurgerMenu() {
       window.removeEventListener("resize", handleResize);
     };
   }, [isOpen]);
-
 
   const burgerVariants = {
     closed: { rotate: 0 },
@@ -45,7 +42,6 @@ function BurgerMenu() {
     open: { x: 0, transition: { type: "spring", stiffness: 150, damping: 25 } },
   };
 
-
   const closeButtonVariants = {
     closed: { scale: 0 },
     open: { scale: 1, transition: { duration: 0.3 } },
@@ -53,7 +49,6 @@ function BurgerMenu() {
 
   return (
     <div className="relative">
-   
       <motion.div
         className="flex flex-col justify-around items-center w-8 h-8 cursor-pointer z-50"
         onClick={toggleMenu}
@@ -87,7 +82,6 @@ function BurgerMenu() {
         ></motion.div>
       </motion.div>
 
- 
       <motion.div
         className="fixed inset-0 bg-black z-50 h-screen"
         variants={menuVariants}
@@ -95,7 +89,6 @@ function BurgerMenu() {
         transition={{ type: "spring", stiffness: 150, damping: 25 }}
       >
         <div className="flex justify-end p-8">
-     
           <motion.button
             className="text-white text-3xl"
             onClick={toggleMenu}
@@ -118,7 +111,7 @@ function BurgerMenu() {
               className="text-white text-2xl font-semibold font-mono uppercase hover:text-gray-300 transition-all transform hover:scale-105 border-b-2 border-white pb-2"
               onClick={toggleMenu}
             >
-              {name}
+              {t(name)}
             </Link>
           ))}
         </motion.div>

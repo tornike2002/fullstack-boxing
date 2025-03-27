@@ -4,7 +4,7 @@ import { Link } from "@/navigation";
 import { AnnouncementTypes } from "@/types/homeTypes";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const fadeInVariant = {
   hidden: { opacity: 0, y: 50 },
@@ -12,6 +12,7 @@ const fadeInVariant = {
 };
 
 function AnnouncementContent({ title, description, image }: AnnouncementTypes) {
+  const t = useTranslations("hero");
   const locale = useLocale() as "en" | "ka" | "ru";
 
   return (
@@ -33,7 +34,7 @@ function AnnouncementContent({ title, description, image }: AnnouncementTypes) {
         </p>
         <Link href={"/contact"}>
           <button className="text-white text-sm font-semibold py-3 px-10 border-white border hover:bg-white hover:text-black transition-all duration-300 ease mt-5">
-            LEARN MORE & ABOUT US
+            {t("btn")}
           </button>
         </Link>
       </motion.div>

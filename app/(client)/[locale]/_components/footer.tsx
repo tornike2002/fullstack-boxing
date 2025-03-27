@@ -17,7 +17,7 @@ function Footer() {
               className="w-auto h-auto"
               priority
             />
-            <h2 className="font-bold text-white">{t("logo-title")}</h2>
+            <h2 className="font-bold text-white">LG BOXING</h2>
           </div>
           <div className="text-white flex extraSm:items-end items-center flex-col gap-7 justify-between w-full">
             <div className="flex items-center gap-2 text-xl text-right">

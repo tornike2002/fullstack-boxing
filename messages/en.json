@@ -1,7 +1,8 @@
 {
   "hero": {
-    "main-title": "THE #1 SKILL-BULDING SELF DEFENSE",
-    "sub-title": "SYSTEM ON THE PLANET."
+    "main-title": "JOIN LG BOXING CLUB RUSTAVI",
+    "sub-title": "BEST BOXING GYM",
+    "btn": "LEARN MORE & ABOUT US"
   },
   "NavLinks": {
     "logo-title": "JG BOXING",
@@ -22,5 +23,16 @@
     "email": "Email",
     "phone": "Phone",
     "address": "Address"
+  },
+  "skeletons": {
+    "title": " Become the champion you were born to be",
+    "skeleton1-t": "Train like a champion",
+    "skeleton1-desc": "Push your limits and train like a true champion. Every punch, every move, brings you closer to greatness.",
+    "skeleton2-t": "Rise above the competition",
+    "skeleton2-desc": "Step into the ring and rise above the competition. It's your time to shine and prove your worth.",
+    "skeleton3-t": "Embrace the grind",
+    "skeleton3-desc": "Boxing is not just a sport, it's a lifestyle. Embrace the grind and let your hard work speak for itself.",
+    "skeleton4-t": "Fight with heart",
+    "skeleton4-desc": "In the ring, it's not just about skill, it's about heart. Fight with passion and determination to achieve victory."
   }
 }
