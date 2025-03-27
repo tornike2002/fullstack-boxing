@@ -17,18 +17,15 @@ function Footer() {
               className="w-auto h-auto"
               priority
             />
-            <h2 className="font-bold text-white">JG BOXING</h2>
+            <h2 className="font-bold text-white">{t("logo-title")}</h2>
           </div>
           <div className="text-white flex extraSm:items-end items-center flex-col gap-7 justify-between w-full">
             <div className="flex items-center gap-2 text-xl text-right">
-              <a href="">
+              <a href="https://www.facebook.com/ucha.maisuradze.9235dx">
                 <FaFacebookF className="transition-transform duration-300 hover:scale-125 cursor-pointer" />
               </a>
-              <a href="">
+              <a href="https://www.tiktok.com/@uchamaisuradze5">
                 <FaTiktok className="transition-transform duration-300 hover:scale-125 cursor-pointer" />
-              </a>
-              <a href="">
-                <FaYoutube className="transition-transform duration-300 hover:scale-125 cursor-pointer" />
               </a>
             </div>
             <div className="extraSm:text-right text-center">
@@ -42,6 +39,9 @@ function Footer() {
               <h2>{t("core")}</h2>
             </div>
           </div>
+        </div>
+        <div className="text-center text-white pb-4 text-xs font-mono">
+          <h3>{t("sponsor")}</h3>
         </div>
       </SmallerContainer>
     </footer>
