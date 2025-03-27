@@ -2,8 +2,10 @@
 import React from "react";
 import { motion } from "motion/react";
 import { LampContainer } from "@/components/ui/lamp";
+import { useTranslations } from "next-intl";
 
 export function Lamp() {
+  const t = useTranslations("lamp");
   return (
     <LampContainer>
       <motion.h1
@@ -16,8 +18,7 @@ export function Lamp() {
         }}
         className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        Find Our Boxing Club
-        <br /> in Rustavi
+        {t("title")} <br /> {t("subtitle")}
       </motion.h1>
     </LampContainer>
   );

@@ -1,30 +1,30 @@
 "use client";
 import React from "react";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
-import Image from "next/image";
+import { useTranslations } from "next-intl";
+
 
 export function HeroScrollDemo() {
+  const t = useTranslations("tablet")
   return (
     <div className="flex flex-col overflow-hidden">
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-4xl font-semibold text-white dark:text-white">
-              Unleash the power of <br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                Scroll Animations
-              </span>
-            </h1>
+        <h1 className="text-4xl font-semibold text-white dark:text-white">
+        {t("title")} <br />
+          <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+          {t("subtitle")}
+          </span>
+        </h1>
           </>
         }
       >
-        <Image
-          src={`/assets/home.jpg`}
-          alt="hero"
-          height={720}
-          width={1400}
-          className="mx-auto rounded-2xl object-cover h-full object-left-top"
-          draggable={false}
+        <iframe
+          src="https://www.youtube.com/embed/89Jt1gDXHs4"
+          className="mx-auto rounded-2xl w-full h-[400px] md:h-[600px]"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
         />
       </ContainerScroll>
     </div>

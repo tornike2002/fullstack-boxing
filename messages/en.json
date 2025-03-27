@@ -22,7 +22,8 @@
   "contact": {
     "email": "Email",
     "phone": "Phone",
-    "address": "Address"
+    "address": "Address",
+    "desc": "Welcome to our boxing club, a place where passion meets discipline. Our club is dedicated to training individuals of all levels, from beginners to professionals. We focus on strength, endurance, and technique, helping members build confidence and achieve their fitness goals. Join us and experience the thrill of boxing in a supportive and motivating environment."
   },
   "skeletons": {
     "title": " Become the champion you were born to be",
@@ -34,5 +35,13 @@
     "skeleton3-desc": "Boxing is not just a sport, it's a lifestyle. Embrace the grind and let your hard work speak for itself.",
     "skeleton4-t": "Fight with heart",
     "skeleton4-desc": "In the ring, it's not just about skill, it's about heart. Fight with passion and determination to achieve victory."
+  },
+  "lamp": {
+    "title": "Find Our Boxing Club",
+    "subtitle": "in Rustavi"
+  },
+  "tablet": {
+    "title": "Become champion ",
+    "subtitle": "Mastering the Power and Technique of Boxing"
   }
 }
