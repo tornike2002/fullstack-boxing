@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { siteConfig } from "@/config/site";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import QueryProvider from "./queryProvider";
