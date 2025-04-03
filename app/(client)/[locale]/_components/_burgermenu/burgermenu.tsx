@@ -26,7 +26,6 @@ function BurgerMenu() {
     };
 
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -63,7 +62,7 @@ function BurgerMenu() {
             open: { opacity: 0 },
           }}
           transition={{ duration: 0.3 }}
-        ></motion.div>
+        />
         <motion.div
           className="w-full h-1 bg-white"
           variants={{
@@ -71,7 +70,7 @@ function BurgerMenu() {
             open: { opacity: 0 },
           }}
           transition={{ duration: 0.3 }}
-        ></motion.div>
+        />
         <motion.div
           className="w-full h-1 bg-white"
           variants={{
@@ -79,12 +78,13 @@ function BurgerMenu() {
             open: { opacity: 1, rotate: -90, y: 5 },
           }}
           transition={{ duration: 0.3 }}
-        ></motion.div>
+        />
       </motion.div>
 
       <motion.div
         className="fixed inset-0 bg-black z-50 h-screen"
         variants={menuVariants}
+        initial="closed"
         animate={isOpen ? "open" : "closed"}
         transition={{ type: "spring", stiffness: 150, damping: 25 }}
       >
