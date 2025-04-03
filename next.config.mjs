@@ -3,6 +3,14 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withIntl = createNextIntlPlugin("./i18.ts");
 
 const nextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: "/sitemap.xml",
+        destination: "/api/sitemap",
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
