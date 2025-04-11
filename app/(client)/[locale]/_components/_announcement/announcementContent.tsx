@@ -43,7 +43,7 @@ function AnnouncementContent({ title, description, image }: AnnouncementTypes) {
         <Image
           src={image}
           alt="announcement"
-          className="object-cover object-center bg-no-repeat rounded-md"
+          className="object-cover object-center bg-no-repeat rounded-md filter brightness-75"
           width={500}
           height={600}
         />
