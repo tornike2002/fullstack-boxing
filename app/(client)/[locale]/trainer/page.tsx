@@ -1,12 +1,12 @@
 import InstructorDesc from "./_components/instructorDesc";
 import { HeroScrollDemo } from "./_components/heroScrollDemo";
-import { Carousel } from "./_components/carousel";
+// import { Carousel } from "./_components/carousel";
 
 function TrainerPage() {
   return (
     <div className="min-h-screen bg-black">
       <InstructorDesc />
-      <Carousel />
+      {/* <Carousel /> */}
       <HeroScrollDemo />
     </div>
   );
