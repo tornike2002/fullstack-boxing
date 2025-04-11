@@ -9,10 +9,6 @@ const ContactUsSkeleton = () => {
           <div className="h-4 w-2/3 bg-gray-600 animate-pulse rounded mt-5"></div>
           <div className="h-4 w-2/3 bg-gray-600 animate-pulse rounded mt-5"></div>
         </div>
-
-        {/* <div className="w-full max-w-[500px]">
-          <div className="w-full h-[300px] bg-gray-600 animate-pulse rounded"></div>
-        </div> */}
       </div>
     </section>
   );
